@@ -21,9 +21,10 @@ Or install it yourself as:
     $ gem install marskal-core_ext
 
 ## Usage
-###### Check out the documentation or the following files for usage and examples
-
-	# Coming Soon: This is just the initial stubbed version, source files have not yet been added.
+#### Review documentation for each classes new methods. This gem adds new methods to the following classes:
+* Array 
+* Date
+* TODO: Add more as they are moved over from old gem
 	
 ## Development
 

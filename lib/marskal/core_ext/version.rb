@@ -1,5 +1,6 @@
 module Marskal
   module CoreExt
-    VERSION = "0.1.0"
+    #Current version of this gem
+    VERSION = "0.1.1.wip"
   end
 end
