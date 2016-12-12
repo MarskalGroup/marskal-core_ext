@@ -7,7 +7,7 @@ require 'test_helper'
 # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
-describe 'Tests for Marskal::CoreExt::MyHash' do
+describe 'Marskal::CoreExt::MyHash' do
 
   describe 'Tests Instance method => assert_require_keys' do
 

@@ -7,7 +7,7 @@ require 'test_helper'
 # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
-describe 'Tests for Marskal::CoreExt::MyI18n' do
+describe 'Marskal::CoreExt::MyI18n' do
 
   describe 'Tests Class method => I18n.tnp_single' do
 
@@ -73,7 +73,7 @@ describe 'Tests for Marskal::CoreExt::MyI18n' do
       I18n.plural_hash_it('investor_statuses', plural_label: :many).must_equal ({:client=>"Clients", :prospect=>"Prospects", :cold=>"Cold Names"})
     end
 
-    it 'Ret Hash when set as plurals, but no :plural_label given' do
+    it 'Ret Hash if set as plurals & no :plural_label' do
       I18n.plural_hash_it('investor_statuses').must_equal ({:client=>"Client", :prospect=>"Prospect", :cold=>"Cold"})
     end
 

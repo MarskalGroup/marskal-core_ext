@@ -22,5 +22,6 @@
     * end_of_week => now end_of_work_week
     * was: start_of_week now: beginning_of_week
     * was: start_of_month: beginning_of_month
+    * remove old to_valid_date references in analytics
     
 

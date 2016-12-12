@@ -7,7 +7,7 @@ require 'test_helper'
 # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
-describe 'Tests for Marskal::CoreExt::MyFile' do
+describe 'Marskal::CoreExt::MyFile' do
   ##
   # Prepare variables for testing
   #

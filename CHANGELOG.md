@@ -1,5 +1,12 @@
 # Changelog
 
+#### 0.1.5.wip - MAU `2016-12-12`  
+**Added methods to String class**
+
+* Added All String methods from old gem, fully documented and tested
+
+---
+
 #### 0.1.4.wip - MAU `2016-12-12`  
 **Added methods to I18n class**
 

@@ -27,7 +27,7 @@ Or install it yourself as:
 * File
 * Hash
 * I18n
-* TODO: Add more as they are moved over from old gem
+* String
 	
 ## Development
 
