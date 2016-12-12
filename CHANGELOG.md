@@ -1,5 +1,10 @@
 # Changelog
 
+#### 0.1.8.alpha - MAU `2016-12-12`  
+**Tweaks to README.md**
+
+---
+
 #### 0.1.7.alpha - MAU `2016-12-12`  
 **More cleanup in preparation of publishing the gem**
 
