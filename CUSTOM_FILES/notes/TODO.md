@@ -9,6 +9,8 @@
     * Use new extend include concept to define methods
 * Aplly new documentation and testing standards to all other classes
 * Add minitest assertions to lib directory or make a marskal-test gem
+* add marskal-test to base or make its own gem
+    * Include the testing stuff put in here
 ------
 
 #### Future Features

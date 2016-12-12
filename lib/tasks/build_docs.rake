@@ -4,8 +4,7 @@ require 'rdoc/task'
 YARD::Rake::YardocTask.new do |yard|
   yard.options = ['-odoc/yard'] # optional
 
-  # yard.files   = ['lib/**/*.rb', '-', '*.md']   # 'make sure that '-'' element is in there or it doesnt process the .md files properly
-  yard.files   = ['test/support_files/custom_expectations.rb', 'lib/**/*.rb', '-', '*.md']   # 'make sure that '-'' element is in there or it doesnt process the .md files properly
+  yard.files   = ['lib/**/*.rb', '-', '*.md']   # 'make sure that '-'' element is in there or it doesnt process the .md files properly
   # yard.options = ['--any', '--extra', '--opts'] # optional
   # yard.stats_options = ['--list-undoc']         # optional
 end
@@ -14,7 +13,7 @@ RDoc::Task.new do |rdoc|
   rdoc.rdoc_dir = 'doc/rdoc'
   # rdoc.options = "-x 'stash' -x 'test' -x 'notes' -x 'bin' -x 'Gemfile' -m 'README.md'"
   rdoc.main = "README.md"
-  rdoc.rdoc_files.include('test/support_files/custom_expectations.rb', "*.md", "lib/**/*.rb", 'Gemfile.lock')
+  rdoc.rdoc_files.include('test/support_files/**/*.rb', "*.md", "lib/**/*.rb", 'Gemfile.lock')
 end
 
 RDoc::Task.new do |rdoc|

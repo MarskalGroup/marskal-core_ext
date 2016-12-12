@@ -3,6 +3,7 @@ require 'marskal/core_ext'
 require 'minitest/autorun'
 require "minitest/reporters"
 require "support_files/custom_expectations"
+require "support_files/marskal_testing_utils"
 
 module TestHelper
   GOT = 0

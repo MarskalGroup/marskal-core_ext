@@ -9,11 +9,12 @@ module MyMod
   end
 
   def an_instance_method
+    88
   end
 
   module ClassMethods
     def a_class_method
-      puts "a_class_method called"
+      88
     end
   end
 end

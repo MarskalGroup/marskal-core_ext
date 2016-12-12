@@ -1,5 +1,13 @@
 # Changelog
 
+#### 0.1.2.wip - MAU `2016-12-10`  
+**Added methods to File and add a new module to support testing needs**
+
+* Added All File methods from old gem
+* Added Marskal::Testing::Utils methods to suppress and +puts+ output during testing
+
+---
+
 #### 0.1.1.wip - MAU `2016-12-10`  
 **Added and Array, Date classes and custom assertions**
 
