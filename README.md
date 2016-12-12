@@ -3,6 +3,7 @@
 This gem contains several extensions to the core classes of Ruby. 
 This was developed using Ruby 2.0 and Ruby 2.1 but many of the extension will likely work with other versions.
 
+The legacy gem was [marskal-core-extensions](https://rubygems.org/gems/marskal-core-extensions). This gem is no longer being maintained. 
 
 ## Installation
 
@@ -35,9 +36,17 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Documentation
+Documentation is available in both <tt>Yard</tt> and <tt>Rdoc</tt> formats.
+
+To install both formats, use the following <tt>rake</tt> command.
+
+    # Note: files will be built in docs/yard and docs/rdoc
+    $ rake marskal:rdoc:generate_all_docs
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/MarskalGroup/marskal-core_ext. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at (https://github.com/MarskalGroup/marskal-core_ext). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

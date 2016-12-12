@@ -1,5 +1,17 @@
 # Changelog
 
+#### 0.1.6.alpha - MAU `2016-12-12`  
+**Some cleanup in preparation ofr publishing the gem**
+
+* Fixed gem install problems on linux
+* Removed unused codde
+* Removed old stashed code
+* Cleaned up notes
+* Add documentation instructions
+* Removed Hanna format
+
+---
+
 #### 0.1.5.wip - MAU `2016-12-12`  
 **Added methods to String class**
 

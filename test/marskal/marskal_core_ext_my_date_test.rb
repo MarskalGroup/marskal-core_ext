@@ -180,8 +180,8 @@ describe 'Marskal::CoreExt::MyDate' do
       @results[:for_highcharts][@got].must_equal @results[:for_highcharts][@expected]
     end
 
-    it 'Must return an Bignum' do
-      @results[:for_highcharts][@got].must_be_instance_of Bignum
+    it 'Must return an Bignum or a Fixnum' do
+      [Fixnum, Bignum].must_include @results[:for_highcharts][@got].class
     end
 
   end

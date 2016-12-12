@@ -11,7 +11,7 @@ require 'active_support/concern'
 require 'active_support/deprecation'
 require 'active_support/core_ext/module/deprecation'
 
-
+# Used to experiment the I18n methods
 # I18n.load_path = Dir['test/support_files/en.yml']
 # I18n.backend.load_translations
 
@@ -21,7 +21,6 @@ require "marskal/core_ext/file"
 require "marskal/core_ext/hash"
 require "marskal/core_ext/i18n"
 require "marskal/core_ext/string"
-# require "marskal/core_ext/my_mod"  #used for testing, take out eventually
 
 
 

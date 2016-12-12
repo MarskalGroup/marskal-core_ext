@@ -16,20 +16,12 @@ RDoc::Task.new do |rdoc|
   rdoc.rdoc_files.include('test/support_files/**/*.rb', "*.md", "lib/**/*.rb", 'Gemfile.lock')
 end
 
-RDoc::Task.new do |rdoc|
-  rdoc.name = 'RDocInHannaFormat'
-  rdoc.title = 'Generate Doc in Hanna Format'
-  rdoc.rdoc_dir = 'doc/hanna'
-  rdoc.generator = 'hanna'
-end
-
 namespace 'marskal' do
   namespace 'rdoc' do
     desc 'Erases /docs folder and Generates docs in all the available formats'
     task :generate_all_docs do
       FileUtils.remove_dir "doc", true
       l_formats = [{ task: 'rdoc', format: 'default RDoc'},
-                   { task: 'RDocInHannaFormat', format: 'Hanna Nouveau'},
                    { task: 'yard', format: 'Yard'}
       ]
       l_formats.each_with_index do |l_format, l_index|
