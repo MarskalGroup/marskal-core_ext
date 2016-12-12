@@ -16,6 +16,9 @@ module Marskal
       # ==== History
       # * <tt>Created: 2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
+      # ==== Extends
+      # * Extends Ruby's <tt>Hash</tt> class
+      #
       # ==== Params
       # * <tt>self(Hash):</tt> self is the hash of key/value pairs to be validated
       # * <tt>*p_required_keys(Array):</tt> Contains the required hash keys

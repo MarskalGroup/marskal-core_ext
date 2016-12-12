@@ -1,0 +1,20 @@
+en:
+  hello: "Hello world"
+  contact:
+        one: "Contact"
+        many: "Contacts"
+  client: "Client"
+  investor_statuses:
+    client:
+      one: "Client"
+      many: "Clients"
+    prospect:
+      one: "Prospect"
+      many: "Prospects"
+    cold:
+      one: "Cold"
+      many: "Cold Names"
+  gender:
+    male: "Male"
+    female: "Female"
+

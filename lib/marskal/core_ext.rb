@@ -11,10 +11,15 @@ require 'active_support/concern'
 require 'active_support/deprecation'
 require 'active_support/core_ext/module/deprecation'
 
+
+# I18n.load_path = Dir['test/support_files/en.yml']
+# I18n.backend.load_translations
+
 require "marskal/core_ext/array"
 require "marskal/core_ext/date"
 require "marskal/core_ext/file"
 require "marskal/core_ext/hash"
+require "marskal/core_ext/i18n"
 # require "marskal/core_ext/my_mod"  #used for testing, take out eventually
 
 
@@ -28,6 +33,7 @@ module Marskal
   # * *Date*
   # * *File*
   # * *Hash*
+  # * *I18n*
   #
   # ==== History
   # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>

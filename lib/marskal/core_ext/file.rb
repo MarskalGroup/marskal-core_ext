@@ -19,6 +19,9 @@ module Marskal
         # ==== History
         # * <tt>Created: 2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
         #
+        # ==== Extends
+        # * Extends Ruby's <tt>File</tt> class
+        #
         # ==== Params
         # * <tt>p_file(String):</tt> The Name of the markdown file to parse into text
         # * <tt>p_options(Hash)(_defaults_ to: nil ):</tt> Not being used at this time, but is available for future enhancements

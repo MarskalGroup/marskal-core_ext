@@ -8,7 +8,12 @@ require "support_files/marskal_testing_utils"
 module TestHelper
   GOT = 0
   EXPECTED = 1
+  I18N_EN_FILE = 'test/support_files/en.yml'
 end
+
+I18n.load_path = Dir[TestHelper::I18N_EN_FILE]
+I18n.backend.load_translations
+
 
 
 

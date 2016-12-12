@@ -20,7 +20,7 @@ module Marskal
       # This method should always return a date on a Monday.
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -45,7 +45,7 @@ module Marskal
       # This method should always return a date on th first day of the month
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -70,7 +70,7 @@ module Marskal
       # to keep more consistent with ruby methods
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -89,7 +89,7 @@ module Marskal
       # This method should always return a date on the first day of a month
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created: 2016-12-11</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -112,7 +112,7 @@ module Marskal
       # Otherwise its best to use Ruby +strftime+ directly.
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created:  2010-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -137,7 +137,7 @@ module Marskal
       # Checks if the given date is a weekend
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created: 2010-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -158,7 +158,7 @@ module Marskal
       # Gets the friday date of the current week. If Saturday or Sunday, it will get the PREVIOUS friday
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>>Created: 2016-12-11</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -179,7 +179,7 @@ module Marskal
       # I cant say I understand exactly how this works, but using examples I came up with a method that HighCharts seems to work well with
       #
       # ==== Extends
-      # Extends Ruby's <tt>Date</tt> class
+      # * Extends Ruby's <tt>Date</tt> class
       #
       # ==== History
       # * <tt>Created: 2014-05-01</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -206,7 +206,7 @@ module Marskal
         # Gets the most recent Monday Date from today. This method should always return a date on a Monday
         #
         # ==== Extends
-        # Extends Ruby's <tt>Date</tt> class
+        # * Extends Ruby's <tt>Date</tt> class
         #
         # ==== History
         # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -232,7 +232,7 @@ module Marskal
         # converts string formatted as mm/dd/yy or mm/dd/yyyy into a date
         #
         # ==== Extends
-        # Extends Ruby's <tt>Date</tt> class
+        # * Extends Ruby's <tt>Date</tt> class
         #
         # ==== History
         # * <tt>Created: 2010-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -252,7 +252,7 @@ module Marskal
         # Checks if the current date is a weekend
         #
         # ==== Extends
-        # Extends Ruby's <tt>Date</tt> class
+        # * Extends Ruby's <tt>Date</tt> class
         #
         # ==== History
         # * <tt>Created: 2010-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>

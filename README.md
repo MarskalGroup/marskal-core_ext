@@ -26,6 +26,7 @@ Or install it yourself as:
 * Date
 * File
 * Hash
+* I18n
 * TODO: Add more as they are moved over from old gem
 	
 ## Development

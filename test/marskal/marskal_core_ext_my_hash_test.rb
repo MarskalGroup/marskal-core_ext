@@ -11,7 +11,7 @@ describe 'Tests for Marskal::CoreExt::MyHash' do
 
   describe 'Tests Instance method => assert_require_keys' do
 
-    it 'Must return true if a the hash object contains all teh required keys' do
+    it 'Return true if Hash contains all the required keys' do
       {lastname: 'jones', firstname: 'tim'}.assert_require_keys(:firstname, :lastname).must_equal true
     end
 

@@ -15,7 +15,7 @@ module Marskal
       # Converts an Array into a String and removes the surrounding brackets
       #
       # ==== Extends
-      # Extends Ruby's  <tt>Array</tt> class
+      # * Extends Ruby's  <tt>Array</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -36,7 +36,7 @@ module Marskal
       # Converts an Array into a String and removes the surrounding brackets and any quotes that exist
       #
       # ==== Extends
-      # Extends Ruby's  <tt>Array</tt> class
+      # * Extends Ruby's  <tt>Array</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -56,7 +56,7 @@ module Marskal
       # Prepares an array for an mysql based *IN* clause
       #
       # ==== Extends
-      # Extends Ruby's  <tt>Array</tt> class
+      # * Extends Ruby's  <tt>Array</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -76,7 +76,7 @@ module Marskal
       # This formats json data for use in the high-charts javascript library functions
       #
       # ==== Extends
-      # Extends Ruby's  <tt>Array</tt> class
+      # * Extends Ruby's  <tt>Array</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
@@ -98,7 +98,7 @@ module Marskal
       # The value will be given as empty string if the field is null in a _MYSQL_ select statement
       #
       # ==== Extends
-      # Extends Ruby's  <tt>Array</tt> class
+      # * Extends Ruby's  <tt>Array</tt> class
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
