@@ -1,5 +1,11 @@
 # Changelog
 
+#### 0.1.3.wip - MAU `2016-12-12`  
+**Added methods to Hash class**
+
+* Added All Hash methods from old gem, fully documented and tested
+
+---
 #### 0.1.2.wip - MAU `2016-12-10`  
 **Added methods to File and add a new module to support testing needs**
 

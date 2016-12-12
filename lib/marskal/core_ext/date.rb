@@ -26,7 +26,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Date)</tt> The most recent past Monday date
+      # * <tt>(Date)</tt> The most recent past Monday date
       #
       # ==== Examples
       #   "2016-10-02".to_date.start_of_week   #=> Mon, 26 Sep 2016
@@ -51,7 +51,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Date)</tt> The beginning of the month given date
+      # * <tt>(Date)</tt> The beginning of the month given date
       #
       # ==== Examples
       #   "2016-10-12".to_date.start_of_month   #=> Sat, 01 Oct 2016
@@ -76,7 +76,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Date)</tt> The beginning of the *NEXT* month given date
+      # * <tt>(Date)</tt> The beginning of the *NEXT* month given date
       #
       # ---
       def start_of_next_month
@@ -95,7 +95,7 @@ module Marskal
       # * <tt>Created: 2016-12-11</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Date)</tt> The beginning of the *NEXT* month of the given date
+      # * <tt>(Date)</tt> The beginning of the *NEXT* month of the given date
       #
       # ==== Examples
       #   "2016-10-12".to_date.beginning_of_next_month   #=> Tue, 01 Nov 2016
@@ -122,7 +122,7 @@ module Marskal
       # * <tt>p_format(String)(_defaults_ to: '%m/%d/%Y' ):</tt> This format that will be passed on to strftime
       #
       # ==== Returns
-      # <tt>(String)</tt> The formatted date
+      # * <tt>(String)</tt> The formatted date
       #
       # ==== Examples
       #   '2016-12-02'.to_date.formatted()            #=> "12/02/2016"
@@ -144,7 +144,7 @@ module Marskal
       # * <tt>Last Modified: 2016-12-11</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Boolean)</tt> true if given date(self) is a weekend
+      # * <tt>(Boolean)</tt> true if given date(self) is a weekend
       #
       # ==== Examples
       #   '2016-12-10'.to_date.is_weekend?   #=> true
@@ -164,7 +164,7 @@ module Marskal
       # * <tt>>Created: 2016-12-11</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Date)</tt> The  Friday date of the given date
+      # * <tt>(Date)</tt> The  Friday date of the given date
       #
       # ==== Examples
       #   '2016-12-10'.to_date.end_of_work_week   #=> Fri, 09 Dec 2016
@@ -185,7 +185,7 @@ module Marskal
       # * <tt>Created: 2014-05-01</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(Date)</tt> The Date in HighCharts compatible format
+      # * <tt>(Date)</tt> The Date in HighCharts compatible format
       #
       # ==== Examples
       #   '2016-12-10'.to_date.for_highcharts   #=> 1481331600000
@@ -212,7 +212,7 @@ module Marskal
         # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
         #
         # ==== Returns
-        # <tt>(Date)</tt> The most recent past Monday date
+        # * <tt>(Date)</tt> The most recent past Monday date
         #
         # ==== Examples
         #   #Assume Today's Date of '2016-12-10'
@@ -238,7 +238,7 @@ module Marskal
         # * <tt>Created: 2010-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
         #
         # ==== Returns
-        # <tt>(Date)</tt> The date representation of the string
+        # * <tt>(Date)</tt> The date representation of the string
         #
         # ---
         def create_from_string(p_date_str)
@@ -259,7 +259,7 @@ module Marskal
         # * <tt>Last Modified: 2016-12-11</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
         #
         # ==== Returns
-        # <tt>(Boolean)</tt> true if current date is a weekend
+        # * <tt>(Boolean)</tt> true if current date is a weekend
         #
         # ==== Examples
         #   #Assume Today's Date of '2016-12-10'

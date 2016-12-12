@@ -31,7 +31,7 @@ describe 'Tests for Marskal::CoreExt::MyDate' do
     @monday = 1  # monday is a wday of 1
 
     @today = Date.today
-    @past_date = Date.today - 6.months
+    @past_date = '2016-06-15'.to_date
     @weekend = '2016-12-11'.to_date
     @results = {
         self_start_of_week: [Date.start_of_week, test_start_of_week(@today)],
@@ -42,7 +42,7 @@ describe 'Tests for Marskal::CoreExt::MyDate' do
         is_today_weekend?: [Date.is_today_weekend?, test_is_a_weekend?],
         is_weekend?: [@weekend.is_weekend?, true],
         end_of_work_week: [@past_date.end_of_work_week, @past_date.beginning_of_week+4.days],
-        for_highcharts: [@past_date.for_highcharts, 1465603200000],
+        for_highcharts: [@past_date.for_highcharts, 1465948800000],
     }
   end
 
@@ -126,7 +126,7 @@ describe 'Tests for Marskal::CoreExt::MyDate' do
 
   end
 
-  describe 'Tests Class method => is_today_weekend?' do
+  describe 'Tests Class method => Date.is_today_weekend?' do
 
     it 'Returns an expected result' do
       @results[:is_today_weekend?][@got].must_equal @results[:is_today_weekend?][@expected]
@@ -188,6 +188,21 @@ describe 'Tests for Marskal::CoreExt::MyDate' do
 
   private
 
+  ##
+  # This uses an alternative method to determine start of week for testing
+  #
+  # ==== History
+  # * <tt>Created: 2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  #
+  # ==== Params
+  # * <tt>p_date(Date):</tt> Date to use to determine when the week started
+  #
+  # ==== Returns
+  # * <tt>(Date)</tt> The Monday that started the week
+  #
+  # ==== Examples
+  #  test_start_of_week('2016-12-11'.to_date)   => Mon, 05 Dec 2016
+  # ---
   def test_start_of_week(p_date)
     if p_date.wday == 0  #sundays count as end of week for vehicle app
       return p_date - 6
@@ -196,6 +211,22 @@ describe 'Tests for Marskal::CoreExt::MyDate' do
     end
   end
 
+  ##
+  # Tests if a date is a weekend or not
+  #
+  # ==== History
+  # * <tt>Created: 2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  #
+  # ==== Params
+  # * <tt>p_date(Hash)(_defaults_ to: Date.today ):</tt> The date to check if it is a weekend day
+  #
+  # ==== Returns
+  # * <tt>(Boolean)</tt> true if it is a weekend day
+  #
+  # ==== Examples
+  #  test_is_a_weekend?('2016-12-11'.to_date)   => true
+  #  test_is_a_weekend?('2016-12-09'.to_date)   => false
+  # ---
   def test_is_a_weekend?(p_date = Date.today)
     p_date.saturday? || p_date.sunday?
   end

@@ -14,6 +14,7 @@ require 'active_support/core_ext/module/deprecation'
 require "marskal/core_ext/array"
 require "marskal/core_ext/date"
 require "marskal/core_ext/file"
+require "marskal/core_ext/hash"
 # require "marskal/core_ext/my_mod"  #used for testing, take out eventually
 
 
@@ -25,6 +26,8 @@ module Marskal
   # ===== Classes Affected
   # * *Array*
   # * *Date*
+  # * *File*
+  # * *Hash*
   #
   # ==== History
   # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>

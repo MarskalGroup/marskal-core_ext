@@ -24,6 +24,8 @@ Or install it yourself as:
 #### Review documentation for each classes new methods. This gem adds new methods to the following classes:
 * Array 
 * Date
+* File
+* Hash
 * TODO: Add more as they are moved over from old gem
 	
 ## Development

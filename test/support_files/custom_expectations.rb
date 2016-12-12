@@ -45,7 +45,7 @@ module Minitest::Assertions
   # * <tt>p_value(String):</tt> This is the string to validate
   #
   # ==== Returns
-  # <tt>(Boolean)</tt> true if brackets do exist at front or back false if not
+  # * <tt>(Boolean)</tt> true if brackets do exist at front or back false if not
   #
   # ==== Examples
   #   has_start_or_end_brackets('[me]')       #=> true
@@ -67,7 +67,7 @@ module Minitest::Assertions
   # * <tt>p_value(Object):</tt> The object variable to validate
   #
   # ==== Returns
-  # <tt>(Boolean)</tt> true either +TrueClass+ or +FalseClass+
+  # * <tt>(Boolean)</tt> true either +TrueClass+ or +FalseClass+
   #
   # ==== Examples
   #   is_boolean(true)  #=> true

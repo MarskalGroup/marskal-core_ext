@@ -21,7 +21,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(String)</tt> The array element as a string without brackets
+      # * <tt>(String)</tt> The array element as a string without brackets
       #
       # ==== Examples
       #   [1,2,3].to_string_no_brackets                 #=> '1,2,3'
@@ -42,7 +42,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(String)</tt> The array element as a string without brackets or quotes
+      # * <tt>(String)</tt> The array element as a string without brackets or quotes
       #
       # ==== Examples
       #   [1,2,3].to_string_no_brackets_or_quotes                 #=> '1,2,3'
@@ -62,7 +62,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(String)</tt> The array element as a string ready for use in an sql *IN* clause
+      # * <tt>(String)</tt> The array element as a string ready for use in an sql *IN* clause
       #
       # ==== Examples
       #   [1,2,3,4].prepare_for_sql_in_clause               #=> "(1, 2, 3, 4)"
@@ -82,7 +82,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(String)</tt> The array element as a string ready for use in Highcharts
+      # * <tt>(String)</tt> The array element as a string ready for use in Highcharts
       #
       # ==== Examples
       #   [1,2,3,4,"1", "rr"].json_data_for_highcharts  #=> "[1,2,3,4,1,rr]"
@@ -104,7 +104,7 @@ module Marskal
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
-      # <tt>(String)</tt> The array formatted each element with IFNULL ready for use in  MYSQL Select
+      # * <tt>(String)</tt> The array formatted each element with IFNULL ready for use in  MYSQL Select
       #
       # ==== Examples
       #   ['fld1', 'fld2', 'fld3'].sql_null_to_blank    #=> ["IFNULL(fld1, '')", "IFNULL(fld2, '')", "IFNULL(fld3, '')"]
