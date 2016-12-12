@@ -1,5 +1,13 @@
 # Changelog
 
+#### 0.1.7.alpha - MAU `2016-12-12`  
+**More cleanup in preparation of publishing the gem**
+
+* Added some error handling to test helper
+* Cleaned up some ambiguous code in string.rb
+
+---
+
 #### 0.1.6.alpha - MAU `2016-12-12`  
 **Some cleanup in preparation ofr publishing the gem**
 
