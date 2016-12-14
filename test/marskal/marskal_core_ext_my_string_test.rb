@@ -162,6 +162,32 @@ describe 'Marskal::CoreExt::MyString' do
 
   end
 
+  describe 'Tests Instance method => is_integer?' do
+
+    it 'Returns a Boolean' do
+      ''.is_integer?.must_be_boolean
+    end
+
+    it 'Returns true if all integers' do
+      '123'.is_integer?.must_equal true
+    end
+
+    it 'Returns false if has decimals' do
+      '1.2.3'.is_integer?.must_equal false
+    end
+
+    it 'Returns false if has letters' do
+      'ABC'.is_integer?.must_equal false
+    end
+
+    it 'Returns false if blank' do
+      ''.is_integer?.must_equal false
+    end
+
+
+
+  end
+
 
 
 end

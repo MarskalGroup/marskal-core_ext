@@ -279,6 +279,31 @@ module Marskal
         return fn.join '.'
       end
 
+      ##
+      # Checks to see if the string qualifies as an integer value.
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>String</tt> class
+      #
+      # ==== History
+      # * <tt>Created: 2016-12-14</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Params
+      # * <tt>self(String):</tt> String to be test if integer
+      #
+      # ==== Returns
+      # * <tt>Boolean</tt> True if integer, false if not
+      #
+      # ==== Examples
+      #   "1.2.3".is_integer?         #=> false
+      #   "Nope".is_integer?          #=> false
+      #   "10-22-33".is_integer?      #=> false
+      #   "123".is_integer?           #=> true
+      # ---
+      def is_integer?
+        self.to_i.to_s == self
+      end
+
     end
   end
 end
