@@ -27,18 +27,18 @@ module Marskal
       # * <tt>self(Array):</tt> self is the Array to sort
       #
       # ==== Returns
-      # * <tt>(Array)</tt> Returns two-dimensional array in [original_index, sorted_value] pairs.
+      # * <tt>(Array)</tt> Returns two-dimensional array in [[sorted_value, original_index], ...] pairs.
       #
       # ==== Examples
-      #   [4,1,3,2].sort_and_include_index                      #=> [[1, 1], [3, 2], [2, 3], [0, 4]]
-      #   [4,1,3,2].sort_and_include_index.reverse              #=> [[0, 4], [2, 3], [3, 2], [1, 1]]
-      #   ['B', 'C', 'A', 'D'].sort_and_include_index.reverse   #=> [[3, "D"], [1, "C"], [0, "B"], [2, "A"]]
-      #   ['B', 'C', 'A', 'D'].sort_and_include_index           #=> [[2, "A"], [0, "B"], [1, "C"], [3, "D"]]
+      #   [4,1,3,2].sort_and_include_index                      #=> [[1, 1], [2, 3], [3, 2], [4, 0]]
+      #   [4,1,3,2].sort_and_include_index.reverse              #=> [[4, 0], [3, 2], [2, 3], [1, 1]]
+      #   ['B', 'C', 'A', 'D'].sort_and_include_index.reverse   #=> [["D", 3], ["C", 1], ["B", 0], ["A", 2]]
+      #   ['B', 'C', 'A', 'D'].sort_and_include_index           #=> [["A", 2], ["B", 0], ["C", 1], ["D", 3]]
       #
       # ---
       def sort_and_include_index
-        #get sorted values and indexes based and return 2  dimension array [index, value]
-        self.map.with_index.sort.map {|v,i| [v, i]}
+        #get sorted values and indexes based and return 2  dimension array [value, index]
+        self.map.with_index.sort.map {|v,i| [v,i]}
       end
 
       ##

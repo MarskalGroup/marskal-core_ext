@@ -1,5 +1,10 @@
 # Changelog
 
+#### 0.1.11.alpha - MAU `2016-12-16`  
+**Fixed Documentation Error for sort_and_include_index **
+
+---
+
 #### 0.1.10.alpha - MAU `2016-12-16`  
 **Added blank? and sort_and_include_index methods**
 
