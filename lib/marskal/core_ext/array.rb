@@ -11,6 +11,60 @@ module Marskal
 
       extend ActiveSupport::Concern
 
+
+      ##
+      # This sorts an array in ascending order (use <tt>.reverse</tt> for descending) and includes the index
+      # in the results returned. This way you know which index was originally connected to each element before and
+      # after the sort. See Examples.
+      #
+      # ==== History
+      # * <tt>Created: 2016-12-16</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>Array</tt> class
+      #
+      # ==== Params
+      # * <tt>self(Array):</tt> self is the Array to sort
+      #
+      # ==== Returns
+      # * <tt>(Array)</tt> Returns two-dimensional array in [original_index, sorted_value] pairs.
+      #
+      # ==== Examples
+      #   [4,1,3,2].sort_and_include_index                      #=> [[1, 1], [3, 2], [2, 3], [0, 4]]
+      #   [4,1,3,2].sort_and_include_index.reverse              #=> [[0, 4], [2, 3], [3, 2], [1, 1]]
+      #   ['B', 'C', 'A', 'D'].sort_and_include_index.reverse   #=> [[3, "D"], [1, "C"], [0, "B"], [2, "A"]]
+      #   ['B', 'C', 'A', 'D'].sort_and_include_index           #=> [[2, "A"], [0, "B"], [1, "C"], [3, "D"]]
+      #
+      # ---
+      def sort_and_include_index
+        #get sorted values and indexes based and return 2  dimension array [index, value]
+        self.map.with_index.sort.map {|v,i| [v, i]}
+      end
+
+      ##
+      # This simply checks for an empty or blank Array.
+      #
+      # ==== History
+      # * <tt>Created: 2016-12-16</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>Array</tt> class
+      #
+      # ==== Params
+      # * <tt>self(Array):</tt> self is the Array to check
+      #
+      # ==== Returns
+      # * <tt>(Boolean)</tt> Returns true if empty Array
+      #
+      # ==== Examples
+      #  [].blank?        #=> true
+      #  [1,2,3].blank?   #=> false
+      # ---
+      def blank?
+        empty?
+      end
+
+
       ##
       # Converts an Array into a String and removes the surrounding brackets
       #

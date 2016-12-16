@@ -2,6 +2,7 @@
 
 #### Priorities
 ------
+* Add Hash.blank?
 
 #### Future Features
 

@@ -1,5 +1,16 @@
 # Changelog
 
+#### 0.1.10.alpha - MAU `2016-12-16`  
+**Added blank? and sort_and_include_index methods**
+
+* Added <tt>Hash</tt> Methods (fully tested and documented)
+    * blank?
+* Added <tt>Array Methods</tt> (fully tested and documented)
+    * blank?
+    * sort_and_include_index  (sorts an array while keep track of its index before sort)
+
+---
+
 #### 0.1.9.alpha - MAU `2016-12-14`  
 **Added to_integer to String class**
 

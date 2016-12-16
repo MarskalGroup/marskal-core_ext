@@ -21,6 +21,19 @@ describe 'Marskal::CoreExt::MyHash' do
 
   end
 
+  describe 'Tests Instance method => blank?' do
+
+    it 'Return true if Hash is empty' do
+      {}.blank?.must_equal true
+    end
+
+    it 'Return false if Hash is NOT empty' do
+      {item1: 'not empty'}.blank?.must_equal false
+    end
+
+
+  end
+
 
 end
 

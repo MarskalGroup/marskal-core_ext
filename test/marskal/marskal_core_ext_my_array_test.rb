@@ -38,6 +38,40 @@ describe 'Marskal::CoreExt::MyArray' do
     }
   end
 
+  describe 'Tests Instance method => sort_and_include_index' do
+    it 'Return Empty Array if Array was passed as empty' do
+      [].sort_and_include_index.must_be_empty
+    end
+
+    it 'Returns expected when passed integer array' do
+      [3,2,1].sort_and_include_index.must_equal [[1, 2], [2, 1], [3, 0]]
+    end
+
+    it 'Returns expected when passed integer array in reverse' do
+      [3,2,1].sort_and_include_index.reverse.must_equal [[3, 0], [2, 1], [1, 2]]
+    end
+
+    it 'Returns expected when passed string array' do
+      %w(B D A C).sort_and_include_index.must_equal [["A", 2], ["B", 0], ["C", 3], ["D", 1]]
+    end
+
+    it 'Returns expected when passed string array in reverse' do
+      %w(B D A C).sort_and_include_index.reverse.must_equal [["D", 1], ["C", 3], ["B", 0], ["A", 2]]
+    end
+
+  end
+
+  describe 'Tests Instance method => blank?' do
+
+    it 'Return true if Array is empty' do
+      [].blank?.must_equal true
+    end
+
+    it 'Return false if Array is NOT empty' do
+      [1,2,3].blank?.must_equal false
+    end
+  end
+
   describe 'Tests method => to_string_no_brackets' do
 
     it 'Returns expected result' do

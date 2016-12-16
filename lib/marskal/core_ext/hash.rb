@@ -50,7 +50,30 @@ module Marskal
         true  #return true if all required keys were given
     
       end
-      
+
+      ##
+      # This simply checks for an empty or blank hash.
+      #
+      # ==== History
+      # * <tt>Created: 2016-12-16</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>Hash</tt> class
+      #
+      # ==== Params
+      # * <tt>self(Hash):</tt> self is the hash to check
+      #
+      # ==== Returns
+      # * <tt>(Boolean)</tt> Returns true if empty hash
+      #
+      # ==== Examples
+      #  {}.blank?                    #=> true
+      #  {lastname: 'jones'}.blank?   #=> false
+      # ---
+      def blank?
+        empty?
+      end
+
     end
   end
 end
