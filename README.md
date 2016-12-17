@@ -23,12 +23,23 @@ Or install it yourself as:
 
 ## Usage
 #### Review documentation for each classes new methods. This gem adds new methods to the following classes:
-* Array 
-* Date
-* File
-* Hash
-* I18n
-* String
+* [<tt>Array</tt>, <tt>Date</tt>, <tt>File</tt>, <tt>Hash</tt>, <tt>I18n</tt>, <tt>String</tt>]
+
+###### Requires:
+```ruby
+  # There 2 ways to require all modules in this gem:
+  require 'marskal/core_ext/all'  # This is recommended way
+  require 'marskal/core_ext'      # However this works as well
+  
+  # To use only selected modules, just simply require one or more as needed
+  require 'marskal/core_ext/array'
+  require 'marskal/core_ext/date'
+  require 'marskal/core_ext/file'
+  require 'marskal/core_ext/hash'
+  require 'marskal/core_ext/i18n'
+  require 'marskal/core_ext/string'
+  # etc
+```
 	
 ## Development
 

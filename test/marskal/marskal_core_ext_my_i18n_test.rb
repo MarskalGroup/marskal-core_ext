@@ -1,4 +1,9 @@
 require 'test_helper'
+require 'marskal/core_ext/i18n'
+
+I18n.load_path = Dir[TestHelper::I18N_EN_FILE]
+I18n.backend.load_translations
+
 
 ##
 # This Section Tests all the Marskal::CoreExt::MyI18n +I18n+ extensions

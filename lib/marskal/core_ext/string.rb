@@ -1,5 +1,9 @@
+require 'active_support/concern'
+require 'active_support/core_ext/string'
+
 module Marskal
   module CoreExt
+
 
     ##
     # Extends functionality to Ruby's +String+ class

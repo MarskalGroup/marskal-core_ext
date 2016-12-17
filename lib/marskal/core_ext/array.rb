@@ -1,3 +1,6 @@
+require 'active_support/concern'
+require 'active_support/json/encoding'
+
 module Marskal
   module CoreExt
 

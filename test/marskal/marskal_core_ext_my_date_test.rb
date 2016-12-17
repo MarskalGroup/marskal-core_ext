@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'marskal/core_ext/date'
 
 ##
 # This Section Tests all the Marskal::CoreExt +Date+ extensions

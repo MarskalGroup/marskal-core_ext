@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'marskal/core_ext/string'
 
 ##
 # This Section Tests all the Marskal::CoreExt +String+ extensions

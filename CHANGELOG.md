@@ -1,5 +1,15 @@
 # Changelog
 
+#### 0.2.0.alpha - MAU `2016-12-17`  
+** Cleaned up and overuse of <tt>requires</tt> **
+* All modules only <tt>require</tt> what they need
+* Testing was modifed as well
+* <tt>all.rb</tt> was added to allow programmers to include all, 
+  but now they can require only what they need in their application
+* <tt>_common.rb</tt> was created for common constants and methods that can be shared by sub modules      
+
+---
+
 #### 0.1.11.alpha - MAU `2016-12-16`  
 **Fixed Documentation Error for sort_and_include_index **
 

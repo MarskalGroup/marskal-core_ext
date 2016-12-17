@@ -1,3 +1,8 @@
+require 'marskal/core_ext/_common'
+require 'active_support/concern'
+require 'active_support/core_ext/hash'
+
+
 module Marskal
   module CoreExt
 

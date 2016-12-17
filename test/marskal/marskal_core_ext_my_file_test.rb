@@ -1,4 +1,6 @@
 require 'test_helper'
+require 'marskal/core_ext/file'
+
 
 ##
 # This Section Tests all the Marskal::CoreExt::MyFile +File+ extensions
