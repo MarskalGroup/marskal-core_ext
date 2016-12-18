@@ -7,4 +7,6 @@ require 'marskal/core_ext/file'
 require 'marskal/core_ext/hash'
 require 'marskal/core_ext/i18n'
 require 'marskal/core_ext/string'
+require 'marskal/core_ext/symbol'
+require 'marskal/core_ext/object'
 

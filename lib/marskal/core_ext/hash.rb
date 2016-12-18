@@ -1,5 +1,3 @@
-require 'active_support/concern'
-
 module Marskal
   module CoreExt
 
@@ -10,7 +8,6 @@ module Marskal
     # * <tt>Created: 2016-12-12</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
     #
     module MyHash
-      extend ActiveSupport::Concern
 
       ##
       # This raises an argument error if the given Hash is missing a required key

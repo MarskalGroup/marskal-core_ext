@@ -5,7 +5,7 @@ require 'marskal/core_ext/date'
 # This Section Tests all the Marskal::CoreExt +Date+ extensions
 #
 # ==== History
-# * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+# * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
 describe 'Marskal::CoreExt::MyDate' do
@@ -14,7 +14,7 @@ describe 'Marskal::CoreExt::MyDate' do
   # Prepare variables for testing
   #
   # ==== History
-  # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
   #
   # ==== Variables
   # * <tt>@got(Array):</tt> Equal to 0, the index to the array element containing the result of the method call

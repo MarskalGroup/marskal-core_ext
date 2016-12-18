@@ -1,9 +1,22 @@
 # Changelog
 
+#### 0.2.1.alpha - MAU `2016-12-17`  
+** Created <tt>Object</tt> and <tt>Symbol</tt> Extensions**
+* Added <tt>Object</tt>  Extensions
+    * Fully Documented and Tested
+    * Added <tt>add_attr_accessors()</tt>
+    * Added <tt>remove_attr_accessors()</tt>
+* Added <tt>Symbol</tt> Extensions
+    * Fully Documented and Tested
+    * Added <tt>to_h</tt>
+* Cleaned up some documentation errors
+
+---
+
 #### 0.2.0.alpha - MAU `2016-12-17`  
 ** Cleaned up and overuse of <tt>requires</tt> **
 * All modules only <tt>require</tt> what they need
-* Testing was modifed as well
+* Testing was modified as well
 * <tt>all.rb</tt> was added to allow programmers to include all, 
   but now they can require only what they need in their application
 * <tt>_common.rb</tt> was created for common constants and methods that can be shared by sub modules      

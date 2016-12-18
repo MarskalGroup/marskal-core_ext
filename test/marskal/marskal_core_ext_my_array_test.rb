@@ -5,7 +5,7 @@ require 'marskal/core_ext/array'
 # This Section Tests all the Marskal::CoreExt +Array+ extensions
 #
 # ==== History
-# * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+# * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
 describe 'Marskal::CoreExt::MyArray' do
@@ -14,7 +14,7 @@ describe 'Marskal::CoreExt::MyArray' do
   # Prepare variables for testing
   #
   # ==== History
-  # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
   #
   # ==== Variables
   # * <tt>@got(Array):</tt> Equal to 0, the index to the array element containing the result of the method call

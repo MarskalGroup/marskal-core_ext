@@ -8,6 +8,7 @@ require 'support_files/marskal_testing_utils'
 module TestHelper
   GOT = 0
   EXPECTED = 1
+  GARBAGE = 'GARBAGE_DATA'
   I18N_EN_FILE = 'test/support_files/en.yml'
 end
 

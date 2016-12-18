@@ -1,12 +1,10 @@
 ##Todo list: Last updated `2016-12-12`  
 
+#### Left Off
+
 #### Priorities
-------
-* Add Hash.blank?
 
 #### Future Features
-
-
 
 #### Fix old legacy code
 * Deprecations or misuses

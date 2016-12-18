@@ -6,7 +6,7 @@ require 'marskal/core_ext/file'
 # This Section Tests all the Marskal::CoreExt::MyFile +File+ extensions
 #
 # ==== History
-# * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+# * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
 describe 'Marskal::CoreExt::MyFile' do
@@ -14,7 +14,7 @@ describe 'Marskal::CoreExt::MyFile' do
   # Prepare variables for testing
   #
   # ==== History
-  # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
   #
   # ==== Variables
   # * <tt>@good_result(Boolean):</tt> The value is true
@@ -30,7 +30,7 @@ describe 'Marskal::CoreExt::MyFile' do
   # After tests are done, we can re-enable the stdout(puts) output
   #
   # ==== History
-  # * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+  # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
   # ---
   after do
     Marskal::Testing::Utils.enable_output

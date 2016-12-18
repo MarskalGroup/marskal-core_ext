@@ -1,4 +1,3 @@
-require 'active_support/concern'
 require 'active_support/core_ext/string'
 
 module Marskal
@@ -12,9 +11,6 @@ module Marskal
     # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
     #
     module MyString
-
-      extend ActiveSupport::Concern
-
 
       ##
       # Replaces new line characters <b>\\n</b> or <b>\\r\\n</b> with the specified string, which defaults to ' '

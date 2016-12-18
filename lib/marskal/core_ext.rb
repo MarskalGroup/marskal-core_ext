@@ -17,7 +17,7 @@ module Marskal
   #   require 'marskal/core_ext/hash'
   #   require 'marskal/core_ext/i18n'
   #   require 'marskal/core_ext/string'
-  #   # etc....
+  #   # etc....(Sell all.rb for full list)
   #
   # ===== Classes Affected
   # * *Array*
@@ -25,13 +25,12 @@ module Marskal
   # * *File*
   # * *Hash*
   # * *I18n*
+  # * *Object*
+  # * *Symbol*
   #
   # ==== History
   # * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
   #
-  module CoreExt
 
-
-  end
 end
 

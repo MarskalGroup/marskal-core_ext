@@ -1,5 +1,5 @@
-require 'active_support/concern'
 require 'active_support/json/encoding'
+require 'active_support/core_ext/hash'
 
 module Marskal
   module CoreExt
@@ -11,10 +11,6 @@ module Marskal
     # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
     #
     module MyArray
-
-      extend ActiveSupport::Concern
-
-
       ##
       # This sorts an array in ascending order (use <tt>.reverse</tt> for descending) and includes the index
       # in the results returned. This way you know which index was originally connected to each element before and

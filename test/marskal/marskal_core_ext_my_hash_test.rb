@@ -5,7 +5,7 @@ require 'marskal/core_ext/hash'
 # This Section Tests all the Marskal::CoreExt::MyHash +Hash+ extensions
 #
 # ==== History
-# * <tt>Created: 2016-10-2016</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+# * <tt>Created: 2016-12-10</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
 #
 # ---
 describe 'Marskal::CoreExt::MyHash' do
