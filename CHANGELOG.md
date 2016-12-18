@@ -1,5 +1,10 @@
 # Changelog
 
+#### 0.2.4.alpha - MAU `2016-12-18`  
+** A small tweak to <tt>remove_attr_accessors()</tt> **
+
+---
+
 #### 0.2.3.alpha - MAU `2016-12-18`  
 ** Added to Hash extension <tt>provide_default</tt>**
 

@@ -152,7 +152,7 @@ module Marskal
 
           #Check if we are removing the read accessor
           if [:read, :both].include?(p_type)
-            if self.respond_to?(l_attr)                   #is an instance variable was set,
+            if instance_variable_defined?(:"@#{l_attr}")  #is an instance variable was set,
               remove_instance_variable(:"@#{l_attr}")     #we first remove it
             end
             if self.methods.include?(l_attr.to_sym)                           #if read method exists
