@@ -10,14 +10,14 @@ require 'marskal/core_ext/hash'
 # ---
 describe 'Marskal::CoreExt::MyHash' do
 
-  describe 'Tests Instance method => assert_require_keys' do
+  describe 'Tests Instance method => provide_default' do
 
-    it 'Return true if Hash contains all the required keys' do
-      {lastname: 'jones', firstname: 'tim'}.assert_require_keys(:firstname, :lastname).must_equal true
+    it 'Return self is key exists ' do
+      {color: 'Red'}.provide_default(:color, 'White').must_equal 'Red'
     end
 
-    it 'Must raise an error if required keys are missing' do
-      proc {{lastname: 'jones', nickname: 'tim'}.assert_require_keys(:firstname, :lastname, :birthday) }.must_raise ArgumentError
+    it 'Return default is key does NOT exist ' do
+      {color: 'Red'}.provide_default(:size, 'Medium').must_equal 'Medium'
     end
 
   end
@@ -35,6 +35,18 @@ describe 'Marskal::CoreExt::MyHash' do
 
   end
 
+
+  describe 'Tests Instance method => assert_require_keys' do
+
+    it 'Return true if Hash contains all the required keys' do
+      {lastname: 'jones', firstname: 'tim'}.assert_require_keys(:firstname, :lastname).must_equal true
+    end
+
+    it 'Must raise an error if required keys are missing' do
+      proc {{lastname: 'jones', nickname: 'tim'}.assert_require_keys(:firstname, :lastname, :birthday) }.must_raise ArgumentError
+    end
+
+  end
 
 end
 

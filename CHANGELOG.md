@@ -1,5 +1,10 @@
 # Changelog
 
+#### 0.2.3.alpha - MAU `2016-12-18`  
+** Added to Hash extension <tt>provide_default</tt>**
+
+---
+
 #### 0.2.2.alpha - MAU `2016-12-17`  
 ** Added NameError Exception in <tt>remove_attr_accessors</tt>**
 * Changed <tt>Object</tt>  Extensions

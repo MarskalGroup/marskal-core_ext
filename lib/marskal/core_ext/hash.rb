@@ -10,6 +10,43 @@ module Marskal
     module MyHash
 
       ##
+      # This is a simple method used to add a key to the hash and supply a default *ONLY* if the key does not already
+      # exist in the hash.
+      #
+      # ==== History
+      # * <tt>Created: 2016-12-18</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>Hash</tt> class
+      #
+      # ==== Params
+      # * <tt>self(Hash):</tt> self is the Hash will be checking and adding to if needed
+      # * <tt>p_key(String or Symbol):</tt> They key to check for
+      # * <tt>p_value(Object):</tt> The value to be applied to this key if the key does not exist yet
+      #
+      # ==== Returns
+      # * <tt>(Object)</tt> Returns the value of the hash element identified by key
+      #
+      # ==== Examples
+      #
+      #   def order_shirt(options = {})
+      #     options.provide_default(:color, 'White')
+      #     options.provide_default(:size, 'Medium')
+      #     puts "#{options[:color]}, #{options[:size]}"
+      #   end
+      #
+      #   order_shirt()                                 #=> White, Medium
+      #   order_shirt(color: 'Red')                     #=> Red, Medium
+      #   order_shirt(size: 'Large')                    #=> White, Large
+      #   order_shirt(color: 'Red', size: 'Large')      #=> Red, Large
+      #
+      # ---
+      def provide_default(p_key, p_value)
+        self[p_key] = p_value unless self.has_key?(p_key)
+        self[p_key]
+      end
+
+      ##
       # This raises an argument error if the given Hash is missing a required key
       #
       # ==== History
