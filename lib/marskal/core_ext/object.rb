@@ -60,17 +60,17 @@ module Marskal
         #loop through the accessors to be added
         Array(p_attributes).flatten.each do |k|
 
-          # Lets set the write accessor if needed
-          if [:write, :both].include?(p_type) && !self.respond_to?("#{k.to_s}=")  #is there already one defined
-            self.class.send(:define_method, "#{k}=".to_sym) do |value|            #lets create one as requested
-              instance_variable_set("@" + k.to_s, value)   # equivalent of an attr_writer is created here
-            end
-          end
-
           #lets set the write reader if needed
           if [:read, :both].include?(p_type) && !self.respond_to?(k.to_s)   #is there already one defined
             self.class.send(:define_method, k.to_sym) do                    #lets create one as requested
               instance_variable_get('@' + k.to_s)           # equivalent of an attr_reader is created here
+            end
+          end
+
+          # Lets set the write accessor if needed
+          if [:write, :both].include?(p_type) && !self.respond_to?("#{k.to_s}=")  #is there already one defined
+            self.class.send(:define_method, "#{k}=".to_sym) do |value|            #lets create one as requested
+              instance_variable_set("@" + k.to_s, value)   # equivalent of an attr_writer is created here
             end
           end
 
@@ -150,22 +150,35 @@ module Marskal
         #loop thru all the attributes
         Array(p_attributes).flatten.each do |l_attr|
 
-          #Check if we are removing the write accessor
-          if [:write, :both].include?(p_type)
-            if self.methods.include?("#{l_attr}=".to_sym)                           #write method exist?
-              self.class.to_s.constantize.send(:undef_method, "#{l_attr}=".to_sym)  #the remove it
-            end
-          end
-
           #Check if we are removing the read accessor
           if [:read, :both].include?(p_type)
             if self.respond_to?(l_attr)                   #is an instance variable was set,
               remove_instance_variable(:"@#{l_attr}")     #we first remove it
             end
             if self.methods.include?(l_attr.to_sym)                           #if read method exists
-              self.class.to_s.constantize.send(:undef_method, l_attr.to_sym)  # Then remove that as well
+              begin
+                # this throws errors without this funky 'class.to_s.constantize' code
+                self.class.to_s.constantize.send(:undef_method, l_attr.to_sym)  # Then remove that as well
+              rescue NameError
+                #do nothing, this happens sometimes, I am not sure why, but for now it seems harmless,
+                # so we just continue TODO: Come back later and research this
+              end  #end rescue
             end
           end
+
+          #Check if we are removing the write accessor
+          if [:write, :both].include?(p_type)
+            if self.methods.include?("#{l_attr}=".to_sym)                           #write method exist?
+              begin
+                # this throws errors without this funky 'class.to_s.constantize' code
+                self.class.to_s.constantize.send(:undef_method, "#{l_attr}=".to_sym)  #the remove it
+              rescue NameError
+                #do nothing, this happens sometimes, I am not sure why, but for now it seems harmless,
+                # so we just continue TODO: Come back later and research this
+              end  #end rescue
+            end
+          end
+
         end # end p_attributes..do
         self #all done return self
       end # end remove_attr_accessors

@@ -1,5 +1,14 @@
 # Changelog
 
+#### 0.2.2.alpha - MAU `2016-12-17`  
+** Added NameError Exception in <tt>remove_attr_accessors</tt>**
+* Changed <tt>Object</tt>  Extensions
+    * Added NameError Exception in <tt>remove_attr_accessors</tt>
+    * Reordered how I create and remove the methods to be more consistent with Ruby accessors
+    * Added documents to reflect changes, and ran Tests
+
+---
+
 #### 0.2.1.alpha - MAU `2016-12-17`  
 ** Created <tt>Object</tt> and <tt>Symbol</tt> Extensions**
 * Added <tt>Object</tt>  Extensions
