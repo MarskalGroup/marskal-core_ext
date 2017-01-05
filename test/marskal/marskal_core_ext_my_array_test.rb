@@ -31,12 +31,70 @@ describe 'Marskal::CoreExt::MyArray' do
     @ary = ['hello','bye','yo','whats up']
     @field_array = ['fld1', 'fld2', 'fld3']
     @results = {
+        merge_with_dups: [ [1,2,3].merge([3,4]),  [1, 2, 3, 4] ],
+        merge: [ @ary.merge(@field_array), ["hello", "bye", "yo", "whats up", "fld1", "fld2", "fld3"]],
         no_brackets: [@ary.to_string_no_brackets, "\"hello\", \"bye\", \"yo\", \"whats up\""],
         no_brackets_or_quotes: [@ary.to_string_no_brackets_or_quotes, "hello, bye, yo, whats up"],
         prepare_for_sql_in_clause: [@ary.prepare_for_sql_in_clause, "(\"hello\", \"bye\", \"yo\", \"whats up\")"],
         json_data_for_highcharts: [@ary.json_data_for_highcharts, "[hello,bye,yo,whats up]"],
         sql_null_to_blank: [@field_array.sql_null_to_blank, ["IFNULL(fld1, '')", "IFNULL(fld2, '')", "IFNULL(fld3, '')"]],
     }
+  end
+
+  describe 'Tests Instance method => merge!' do
+
+    it 'Returns self if non dup self merged with empty array ' do
+      l_ary = [1,2,3]
+      l_ary_before = l_ary
+      l_ary.merge!([])
+      l_ary.must_equal l_ary_before
+    end
+
+    it 'Returns uniq self if self has dups' do
+      l_ary = [1, 2, 2, 3]
+      l_ary_before = l_ary
+      l_ary.merge!([])
+      l_ary.must_equal l_ary_before.uniq
+    end
+
+    it 'Returns expected result when 2 unique arrays' do
+      l_ary = [1, 2, 3]
+      l_ary2 = [4, 5]
+      l_ary.merge!(l_ary2)
+      l_ary.must_equal [1, 2, 3, 4, 5]
+    end
+
+    it 'Returns expected result when arrays contain dups' do
+      l_ary = [1, 2, 3]
+      l_ary2 = [3, 4]
+      l_ary.merge!(l_ary2)
+      l_ary.must_equal [1, 2, 3, 4]
+    end
+
+    it 'Must raise an error if arg is not an array' do
+      proc {[].merge('String is Bad Arg') }.must_raise ArgumentError
+    end
+
+  end
+
+  describe 'Tests Instance method => merge' do
+
+    it 'Returns an Array ' do
+      [].merge([]).must_be_kind_of Array
+    end
+
+    it 'Returns expected result when 2 unique arrays' do
+      @results[:merge][@got].must_equal @results[:merge][@expected]
+    end
+
+    it 'Returns expected result when arrays contain dups' do
+      @results[:merge_with_dups][@got].must_equal @results[:merge_with_dups][@expected]
+    end
+
+    it 'Must raise an error if arg is not an array' do
+      proc {[].merge('String is Bad Arg') }.must_raise ArgumentError
+    end
+
   end
 
   describe 'Tests Instance method => sort_and_include_index' do

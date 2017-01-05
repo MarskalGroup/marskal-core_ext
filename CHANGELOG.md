@@ -1,5 +1,10 @@
 # Changelog
 
+#### 0.2.5.alpha - MAU `2017-01-05`  
+** Added <tt>merge</tt> & <tt>merge!</tt> to <tt>Array</tt> **
+
+---
+
 #### 0.2.4.alpha - MAU `2016-12-18`  
 ** A small tweak to <tt>remove_attr_accessors()</tt> **
 

@@ -12,6 +12,67 @@ module Marskal
     #
     module MyArray
       ##
+      # This merges an array with another array AND changes the original array (self)
+      # The result will be a *UNIQUE* array of the combined elements
+      #
+      # ==== History
+      # * <tt>Created: 2017-01-05</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>Array</tt> class
+      #
+      # ==== Params
+      # * <tt>self(Array):</tt> Array to be merged into
+      # * <tt>p_array(Array):</tt> the Array to start the merged from
+      #
+      # ==== Returns
+      # * <tt>(Array)</tt> Returns a new self which is a *UNIQUE* array of combined elements
+      #
+      # ==== Examples
+      #   a = [1,2,3]
+      #   a.merge!([3, 4])  #=> a now equals [1, 2, 3, 4]
+      #
+      #   b = [1,2,3]
+      #   b.merge!([4,5])   #=> b now equals [1, 2, 3, 4, 5]
+      #
+      # ---
+      def merge!(p_array)
+        self.replace(merge(p_array))
+      end
+
+      ##
+      # This merges an array with another array but does NOT change the original array (self)
+      # The result will be a *UNIQUE* array of the combined elements
+      #
+      # ==== History
+      # * <tt>Created: 2017-01-05</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Extends
+      # * Extends Ruby's <tt>Array</tt> class
+      #
+      # ==== Params
+      # * <tt>self(Array):</tt> Array to be merged into
+      # * <tt>p_array(Array):</tt> the Array to start the merged from
+      #
+      # ==== Returns
+      # * <tt>(Array)</tt> Returns a *UNIQUE* array of combined elements
+      #
+      # ==== Examples
+      #   a = [1,2,3]
+      #   a.merge([3, 4])       #=> [1, 2, 3, 4]
+      #   a.merge([4,5])        #=> [1, 2, 3, 4, 5]
+      #   a                     #=> [1,2,3]
+      #
+      # ---
+      def merge(p_array)
+        unless p_array.is_a?(Array)
+          raise ArgumentError.new("#{__method__} method requires an array, not a #{p_array.class}")
+        end
+
+        (self + p_array).uniq
+      end
+
+      ##
       # This sorts an array in ascending order (use <tt>.reverse</tt> for descending) and includes the index
       # in the results returned. This way you know which index was originally connected to each element before and
       # after the sort. See Examples.
