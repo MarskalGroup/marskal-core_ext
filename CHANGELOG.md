@@ -1,5 +1,9 @@
 # Changelog
 
+#### 0.2.6.alpha - MAU `2017-12-01`  
+** fixed a formatting problem that was causing mini-test to generate warnings
+---
+
 #### 0.2.5.alpha - MAU `2017-01-05`  
 ** Added <tt>merge</tt> & <tt>merge!</tt> to <tt>Array</tt> **
 
