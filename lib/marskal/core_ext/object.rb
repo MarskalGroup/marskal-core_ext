@@ -12,6 +12,30 @@ module Marskal
     module MyObject
 
       ##
+      # Checks if the self is either a TrueClass or a FalseClass
+      #
+      # ==== History
+      # * <tt>Created: 2017-12-02</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      #
+      # ==== Params
+      # * None
+      #
+      # ==== Returns
+      # * <tt>(Boolean)</tt> true either +TrueClass+ or +FalseClass+
+      #
+      # ==== Examples
+      #   a = true
+      #   b = false
+      #   a.is_boolean?             #=> true
+      #   nil.is_boolean?           #=> false
+      #   "some string".is_boolean? #=> false
+      #   b.is_boolean?             #=> true
+      # ---
+      def is_boolean? #:doc:
+        (self.is_a?(TrueClass) || self.is_a?(FalseClass))
+      end      
+
+      ##
       # This emulates the +attr_accessor+, +attr_reader+, +attr_writer+ methods of Ruby. The purpose
       # is to allow these to be defined dynamically
       #
@@ -189,3 +213,4 @@ end
 
 # now that the module has been built, lets extend Ruby's +Object+ class to accept these methods
 Object.send(:include, Marskal::CoreExt::MyObject)
+BasicObject.send(:include, Marskal::CoreExt::MyObject)

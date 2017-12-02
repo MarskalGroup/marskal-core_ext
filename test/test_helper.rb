@@ -1,7 +1,10 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'minitest/autorun'
-require 'support_files/custom_expectations'
-require 'support_files/marskal_testing_utils'
+
+test_root = File.dirname(File.absolute_path(__FILE__))
+Dir.glob(test_root + '/support_files/**/*.rb').each { |file |  require file }
+# require 'support_files/custom_expectations'
+# require 'support_files/marskal_testing_utils'
 
 
 

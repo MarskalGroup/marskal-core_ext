@@ -26,12 +26,14 @@ describe 'Marskal::CoreExt::MyObject' do
     class MarskalTestObjectClass
 
       #dummy test attributes
-      attr_accessor :attr1,  :attr2, :attr3
+      attr_accessor :attr1,  :attr2, :attr3, :attr_true, :attr_false
 
       def initialize
         @attr1 = 1
         @attr2 = 2
         @attr3 = 3
+        @attr_true = true
+        @attr_false = false
       end
     end
 
@@ -47,6 +49,25 @@ describe 'Marskal::CoreExt::MyObject' do
   # ---
   after do
     Object.send(:remove_const, :MarskalTestObjectClass)
+  end
+
+  describe 'Tests Instance method =>  is_boolean?' do
+
+    it 'Returns true if variable is true' do
+      @attr_true.is_boolean?.must_be_boolean
+    end
+
+    it 'Returns true if variable is false' do
+      @attr_false.is_boolean?.must_be_boolean
+    end
+
+    it 'Returns false if String true if variable is false' do
+      DATATYPE_SAMPLES
+          .reject{|k,v| [:true_class, :false_class].include?(k) }
+          .select{|k,v| v.is_boolean?
+          }.must_be_empty
+    end
+
   end
 
   describe 'Tests Instance method =>  add_attr_accessors' do
