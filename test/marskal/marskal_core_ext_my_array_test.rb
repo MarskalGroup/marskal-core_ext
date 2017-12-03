@@ -36,7 +36,8 @@ describe 'Marskal::CoreExt::MyArray' do
         no_brackets: [@ary.to_string_no_brackets, "\"hello\", \"bye\", \"yo\", \"whats up\""],
         no_brackets_or_quotes: [@ary.to_string_no_brackets_or_quotes, "hello, bye, yo, whats up"],
         prepare_for_sql_in_clause: [@ary.prepare_for_sql_in_clause, "(\"hello\", \"bye\", \"yo\", \"whats up\")"],
-        json_data_for_highcharts: [@ary.json_data_for_highcharts, "[hello,bye,yo,whats up]"],
+        #OLD WAY json_data_for_highcharts: [@ary.json_data_for_highcharts, "[hello,bye,yo,whats up]"],
+        json_data_for_highcharts: ["#{@ary.json_data_for_highcharts}", "[\"hello\",\"bye\",\"yo\",\"whats up\"]"],
         sql_null_to_blank: [@field_array.sql_null_to_blank, ["IFNULL(fld1, '')", "IFNULL(fld2, '')", "IFNULL(fld3, '')"]],
     }
   end

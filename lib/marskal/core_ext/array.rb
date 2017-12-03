@@ -194,17 +194,25 @@ module Marskal
       #
       # ==== History
       # * <tt>Created: 2013-ish</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
+      # * <tt>Updated: 2017-12-03</tt> <b>Mike Urban</b> <mike@marskalgroup.com>
       #
       # ==== Returns
       # * <tt>(String)</tt> The array element as a string ready for use in Highcharts
       #
       # ==== Examples
-      #   [1,2,3,4,"1", "rr"].json_data_for_highcharts  #=> "[1,2,3,4,1,rr]"
+      #   [1,2,3,4,"1", "rr"].json_data_for_highcharts  #=> "[1,2,3,4,\"1\",\"rr\"]"
       # ---
+      #
       def json_data_for_highcharts
-        # self.to_json.gsub(/[\'\"]/,'')   # Future?: maybe add this as a parameter to include or exclude single quotes
-        self.to_json.gsub(/[\"]/,'')       # but for now, we will allow single quotes strings are allowed in json
+        self.to_json.html_safe
       end
+
+      #this is old way in old highcharts i believe
+      #we used this way back in analytics. Code saved here in case we need it
+      # def OLDWAY_json_data_for_highcharts
+      #   # self.to_json.gsub(/[\'\"]/,'')   # Future?: maybe add this as a parameter to include or exclude single quotes
+      #   self.to_json.gsub(/[\"]/,'')       # but for now, we will allow single quotes strings are allowed in json
+      # end
 
 
       ##

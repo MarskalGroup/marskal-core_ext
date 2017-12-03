@@ -1,5 +1,9 @@
 # Changelog
 
+#### 0.2.8.alpha - MAU `2017-12-03`  
+* Modified Array method json_data_for_highcharts to conform to latest highcharts
+---
+
 #### 0.2.7.alpha - MAU `2017-12-02`  
 * Added is_boolean? to Object
 * Changed versions of some gem dependencies

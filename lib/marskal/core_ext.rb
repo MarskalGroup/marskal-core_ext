@@ -1,4 +1,4 @@
-require 'marskal/core_ext/all'
+#require 'marskal/core_ext/all'
 module Marskal
 
   ##
